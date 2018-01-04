@@ -164,7 +164,49 @@ document.addEventListener('click', function (event) {
     var nameTeacher = projects.project_type[typePPP][proj].teacher[0].name;
     teachers.appendChild(imageTeacher);
     teachers.appendChild(document.createTextNode(nameTeacher));
+    var listContactsSuggest = document.querySelector('.listContactsSuggest');
+
+    var articles = document.querySelector('.articles');
+    var articleBox = document.createElement('div');
+    var paragraph = document.createElement('p');
+    var paragraph2 = document.createElement('p');
+    var paragraph3 = document.createElement('p');
+    articleBox.className = 'articleBox';
+    paragraph.appendChild(document.createTextNode(projects.project_type[typePPP][proj].article[0].title));
+    paragraph2.appendChild(document.createTextNode(projects.project_type[typePPP][proj].article[0].content));
+    paragraph3.appendChild(document.createTextNode(projects.project_type[typePPP][proj].article[0].author));
+    articleBox.appendChild(paragraph);
+    articleBox.appendChild(paragraph2);
+    articleBox.appendChild(paragraph3);
+
+    articles.appendChild(articleBox);
+    for (let j = 0; j < projects.project_type[typePPP][proj].students.length; j++) {
+      var imageStudent = document.createElement('img');
+      imageStudent.setAttribute('src', projects.project_type[typePPP][proj].students[j].photoSt);
+      imageStudent.className = 'imageStudent';
+      var buttonStudent = document.createElement('button');
+      buttonStudent.setAttribute('type', 'button');
+      buttonStudent.className = 'buttonStudent';
+
+      buttonStudent.appendChild(imageStudent);
+      buttonStudent.appendChild(document.createTextNode(projects.project_type[typePPP][proj].students[j].name));
+      listContactsSuggest.appendChild(buttonStudent);
+    }
   }
+
+  if (objetivo.className.match("buttonStudent")) {
+    var objetive = objetivo.lastChild.textContent;
+    console.log(objetive);
+    var listContactsAdd = document.querySelector('.listContactsAdd');
+    var boxB = document.createElement('button');
+    boxB.setAttribute('type', 'button');
+    boxB.className = 'boxB';
+    boxB.appendChild(document.createTextNode(objetive));
+    listContactsAdd.appendChild(boxB);
+  }
+
+
+
 });
 
 

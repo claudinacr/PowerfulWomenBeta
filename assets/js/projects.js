@@ -8,31 +8,37 @@ var projects = {
           'active': true,
         }],
         'students': [{
-          'name': 'Marta',
-          'photo': 'assets/images/girl4.png',
-          'active': true,
-          'message': 'Feliz inicio de proyecto',
-
-        }],
+            'name': 'Marta',
+            'active': true,
+            'message': 'Feliz inicio de proyecto',
+            'photoSt': 'assets/images/girl2.png',
+          },
+          {
+            'name': 'Maria',
+            'active': true,
+            'message': 'Feliz inicio de proyecto',
+            'photoSt': 'assets/images/girl5.png',
+          }
+        ],
         'description': [{
           'information': 'http://dummyimage.com/162x148.png/ff4444/ffffff',
           'time': '5 days',
         }],
         'article': [{
           'title': 'Donna Sloper',
-          'content': 'http://dummyimage.com/162x148.png/ff4444/ffffff',
-          'author': true,
+          'content': 'Este articulo...',
+          'author': 'Ja',
         }]
       },
       'web': {
         'teacher': [{
-          'name': 'Donna Sloper',
-          'photo': 'http://dummyimage.com/162x148.png/ff4444/ffffff',
+          'name': 'Carey Mary',
+          'photo': 'assets/images/teacher11.png',
           'active': true,
         }],
         'students': [{
           'name': 'Donna Sloper',
-          'photo': 'http://dummyimage.com/162x148.png/ff4444/ffffff',
+          'photo': 'assets/images/girl14.png',
           'active': true,
           'message': 'Feliz inicio de proyecto',
 
