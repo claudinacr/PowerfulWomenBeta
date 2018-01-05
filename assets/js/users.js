@@ -11,9 +11,9 @@ var users = [{
     "photo": "assets/images/girl13.png",
   },
   {
-    "first_name": "Carolina",
-    "last_name": "Perez",
-    "user": "calolinaperez",
+    "first_name": "Daniela",
+    "last_name": "Gallardo",
+    "user": "danielag",
     "password": "54321",
     "birth_date": "1990-03-15",
     "age": "20",

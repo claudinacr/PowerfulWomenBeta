@@ -574,3 +574,49 @@ textarea {
     font-weight: bold;
     font-size: 1.3em;
 }
+
+#index-registro-background {
+    background-image: url("../images/ideas-photo-450270.gif");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #2E2E2E;
+}
+
+.col-descripcion-registro {
+    background-color: #2E2E2E;
+    padding: 1% 2%;
+    border-radius: 10px;
+    opacity: 0.8;
+}
+
+.textGray-web {
+    color: #B1B7BE;
+    text-align: center;
+}
+
+.textPink-web {
+    font-family: 'Kaushan Script', cursive;
+    color: #EA7068;
+    font-weight: bolder;
+}
+
+.registro-link {
+    color: #ffc44f;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5em;
+    text-decoration: none;
+    padding-left: 20%;
+}
+
+.registro-link a {
+    color: #ffc44f;
+    text-decoration: none;
+}
+
+.registro-link a:hover {
+    color: white;
+    text-decoration: none;
+}
