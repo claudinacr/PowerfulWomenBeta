@@ -1,5 +1,5 @@
 //AUTENTICACION DE USUARIO
-
+var usuarioAutent = '';
 var buttonSend = document.getElementById('buttonSend');
 
 function getUser() {
@@ -74,7 +74,62 @@ function authentication(arrayUser, arrayPassword, user, password) {
     // users[positionJ].photo
 
     usser.appendChild(document.createTextNode(user));
-    // console.log(usser.textContent);
+    usuarioAutent = user;
+
+    var profile = document.querySelector('.profile');
+
+    for (let m = 0; m < users.length; m++) {
+      if ((users[m].user === usuarioAutent)) {
+        var savePosition = m;
+        console.log(savePosition);
+      }
+    }
+    var nombrefirstName = document.createTextNode('Nombre: ');
+    var firstName = document.createTextNode(users[savePosition].first_name);
+    var espacio = document.createElement('p');
+    espacio.appendChild(nombrefirstName);
+    espacio.appendChild(firstName);
+    profile.appendChild(espacio);
+
+    espacio2 = document.createElement('p');
+    var apellidoLast_name = document.createTextNode('Apellido: ');
+    var last_name = document.createTextNode(users[savePosition].last_name);
+    espacio2.appendChild(apellidoLast_name);
+    espacio2.appendChild(last_name);
+    profile.appendChild(espacio2);
+
+    espacio3 = document.createElement('p');
+    var nacimientobirth_date = document.createTextNode('Nacimiento: ');
+    var birth_date = document.createTextNode(users[savePosition].birth_date);
+    espacio3.appendChild(nacimientobirth_date);
+    espacio3.appendChild(birth_date);
+    profile.appendChild(espacio3);
+
+    espacio4 = document.createElement('p');
+    var Docupation = document.createTextNode('Ocupación: ');
+    var ocupation = document.createTextNode(users[savePosition].ocupation);
+    espacio4.appendChild(Docupation);
+    espacio4.appendChild(ocupation);
+    profile.appendChild(espacio4);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   } else {
     alert('Usuario y contraseña no validos');
   }
@@ -114,7 +169,6 @@ document.addEventListener('click', function (event) {
   var objetivo = event.target;
   var projectss = projects.project_type;
   var projectClick = '';
-
   if (objetivo.className.match("buttonProjectType")) {
     var objet = objetivo.value;
     projectClick = objetivo.value;
@@ -142,7 +196,6 @@ document.addEventListener('click', function (event) {
   var pT = document.querySelector('.projectType');
   var typePP = pT.firstChild.firstChild;
   if (objetivo.className.match("projectButton")) {
-
     var parrafo = document.createElement('p');
     var titleProject = document.createTextNode('Proyectos');
     parrafo.appendChild(titleProject);
@@ -159,7 +212,7 @@ document.addEventListener('click', function (event) {
     var teachers = document.querySelector('.listTeachers');
     var typePPP = typePP.textContent;
     var proj = text.textContent;
-    // console.log(typePPP, proj);
+    console.log(proj);
     var imageTeacher = document.createElement('img');
     imageTeacher.className = 'imageTeacher';
     imageTeacher.setAttribute('src', projects.project_type[typePPP][proj].teacher[0].photo);
@@ -182,6 +235,9 @@ document.addEventListener('click', function (event) {
     articleBox.appendChild(paragraph3);
 
     articles.appendChild(articleBox);
+
+
+
     for (let j = 0; j < projects.project_type[typePPP][proj].students.length; j++) {
       var imageStudent = document.createElement('img');
       imageStudent.setAttribute('src', projects.project_type[typePPP][proj].students[j].photoSt);
@@ -198,7 +254,6 @@ document.addEventListener('click', function (event) {
 
   if (objetivo.className.match("buttonStudent")) {
     var objetive = objetivo.lastChild.textContent;
-    console.log(objetive);
     objetivo.style.display = 'none';
     var listContactsAdd = document.querySelector('.listContactsAdd');
     var boxB = document.createElement('button');
@@ -206,6 +261,24 @@ document.addEventListener('click', function (event) {
     boxB.className = 'boxB';
     boxB.appendChild(document.createTextNode(objetive));
     listContactsAdd.appendChild(boxB);
+
+    var newFeed = document.querySelector('.newFeed');
+    var pa = document.createElement('p');
+    var type = typePP.textContent;
+    var work = document.querySelector('.Work');
+    var proJ = work.lastChild.textContent;
+    for (let l = 0; l < projects.project_type[type][proJ].students.length; l++) {
+      if (objetive === projects.project_type[type][proJ].students[l].name) {
+        var saveP = l;
+
+        pa.appendChild(document.createTextNode(projects.project_type[type][proJ].students[l].newFeed));
+        newFeed.appendChild(pa);
+      }
+
+    }
+    // console.log(projects.project_type[type][proj].students.length);
+
+
   }
 
 

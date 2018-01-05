@@ -12,12 +12,14 @@ var projects = {
             'active': true,
             'message': 'Feliz inicio de proyecto',
             'photoSt': 'assets/images/girl2.png',
+            'newFeed': 'Estoy...%',
           },
           {
             'name': 'Maria',
             'active': true,
             'message': 'Feliz inicio de proyecto',
             'photoSt': 'assets/images/girl5.png',
+            'newFeed': 'Estoy...%',
           }
         ],
         'description': [{
@@ -41,6 +43,8 @@ var projects = {
           'photo': 'assets/images/girl14.png',
           'active': true,
           'message': 'Feliz inicio de proyecto',
+          'newFeed': 'Estoy...%',
+
 
         }],
         'description': [{
