@@ -87,6 +87,24 @@
     .search {
         display: none;
     }
+    .profile {
+        display: none;
+    }
+    .Work {
+        display: none;
+    }
+    .description {
+        display: none;
+    }
+    .time {
+        display: none;
+    }
+    .articles {
+        display: none;
+    }
+    .listTeachers {
+        display: none;
+    }
 }
 
 
