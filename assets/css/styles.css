@@ -148,6 +148,7 @@ footer {
     border: 0.3em #FFA399 solid;
     margin-top: 1em;
     padding-left: 3em;
+    border: 1px blue solid;
 }
 
 .buttonIS {
@@ -291,7 +292,7 @@ img[src="assets/images/startup.png"] {
 
 .articles {
     width: 100%;
-    height: 14em;
+    height: 20em;
     background-color: #FFA399;
     border: 0.2em #8CD3D2 solid;
     border-radius: 5px;
@@ -459,7 +460,7 @@ textarea {
 .articleBox {
     margin-top: 1em;
     width: 13em;
-    height: 7em;
+    height: 16em;
     background-color: #DFDFDF;
     border: 0.2em #8CD3D2 solid;
     border-radius: 5px;
@@ -509,7 +510,7 @@ textarea {
 .description {
     margin-left: 1em;
     width: 100%;
-    height: 9em;
+    height: 12em;
     background-color: #FFA399;
     border: 0.2em #8CD3D2 solid;
     border-radius: 5px;
