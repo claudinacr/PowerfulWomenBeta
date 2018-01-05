@@ -184,7 +184,10 @@ document.addEventListener('click', function (event) {
     typeP.style.color = 'white';
     projectType.appendChild(typeP);
     projectType.style.display = 'block';
-
+    var titleH2 = document.createElement('h2');
+    var titlecP = document.createTextNode('¿Qué proyecto desea desarrollar?');
+    titleH2.appendChild(titlecP);
+    projectType.appendChild(titleH2);
     for (let i = 0; i < cP.length; i++) {
 
       var projectButton = document.createElement('button');
@@ -194,7 +197,9 @@ document.addEventListener('click', function (event) {
       projectButton.appendChild(document.createTextNode(cP[i]));
       projectType.appendChild(projectButton);
     }
+
   }
+
 
   var pT = document.querySelector('.projectType');
   var typePP = pT.firstChild.firstChild;
@@ -262,14 +267,12 @@ document.addEventListener('click', function (event) {
   }
 
   if (objetivo.className.match("buttonStudent")) {
-    var objetive = objetivo.lastChild.textContent;
+    var objetive = objetivo.cloneNode(true);
     objetivo.style.display = 'none';
     var listContactsAdd = document.querySelector('.listContactsAdd');
-    var boxB = document.createElement('button');
-    boxB.setAttribute('type', 'button');
-    boxB.className = 'boxB';
-    boxB.appendChild(document.createTextNode(objetive));
-    listContactsAdd.appendChild(boxB);
+
+    listContactsAdd.appendChild(objetive);
+    // listContactsAdd.appendChild(boxB);
 
     var newFeed = document.querySelector('.newFeed');
     var pa = document.createElement('p');
@@ -277,7 +280,7 @@ document.addEventListener('click', function (event) {
     var work = document.querySelector('.Work');
     var proJ = work.lastChild.textContent;
     for (let l = 0; l < projects.project_type[type][proJ].students.length; l++) {
-      if (objetive === projects.project_type[type][proJ].students[l].name) {
+      if (objetive.lastChild.textContent === projects.project_type[type][proJ].students[l].name) {
         var saveP = l;
 
         pa.appendChild(document.createTextNode(projects.project_type[type][proJ].students[l].newFeed));
