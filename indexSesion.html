@@ -84,6 +84,9 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-2 projectWork ">
+          <div class="profile">
+            <h4>Perfil</h4>
+          </div>
           <div class="Work">
 
           </div>
@@ -101,14 +104,21 @@
 
               <button type="button" name="Send" id="botonSend">Comentar</button>
 
-              <form class="forma">
-                <div class="form-group">
-                  <label for="exampleFormControlFile1"></label>
-                  <input type="file" class="form-control-file" id="exampleFormControlFile1">
-                </div>
-              </form>
-            </div>
 
+
+
+            </div>
+            <div class="upImage">
+              <input type="file" accept="image/*" onchange="loadFile(event)">
+              <img id="output" />
+            </div>
+            <script>
+              var loadFile = function (event) {
+                var output = document.getElementById('output');
+                output.src = URL.createObjectURL(event.target.files[0]);
+                console.log(src);
+              };
+            </script>
           </div>
           <section class="sent_messages">
 

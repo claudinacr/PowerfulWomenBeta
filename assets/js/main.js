@@ -1,4 +1,5 @@
 //AUTENTICACION DE USUARIO
+
 var buttonSend = document.getElementById('buttonSend');
 
 function getUser() {
@@ -73,6 +74,7 @@ function authentication(arrayUser, arrayPassword, user, password) {
     // users[positionJ].photo
 
     usser.appendChild(document.createTextNode(user));
+    // console.log(usser.textContent);
   } else {
     alert('Usuario y contraseña no validos');
   }
@@ -197,6 +199,7 @@ document.addEventListener('click', function (event) {
   if (objetivo.className.match("buttonStudent")) {
     var objetive = objetivo.lastChild.textContent;
     console.log(objetive);
+    objetivo.style.display = 'none';
     var listContactsAdd = document.querySelector('.listContactsAdd');
     var boxB = document.createElement('button');
     boxB.setAttribute('type', 'button');
@@ -251,10 +254,18 @@ function sendTweet() {
     var tweetText = document.createTextNode(mensaje);
 
     var fecha = document.createTextNode(moment().format('MMMM Do YYYY, h:mm:ss a') + ":");
-
+    var imageUpload = document.querySelector('#output');
+    var image = imageUpload;
     tweet.appendChild(fecha);
     tweet.appendChild(tweetText);
+    tweet.appendChild(image);
+
     cajaTweet.appendChild(tweet);
+
+
+
+
+
   }
 
 }
@@ -296,7 +307,7 @@ function contadorCambio() {
 
   } else {
     botonSend.disabled = false;
-    hr.style.borderColor = '#6AD2F3';
+    // hr.style.borderColor = '#6AD2F3';
   }
 }
 textArea.onfocus = contadorCambio;
