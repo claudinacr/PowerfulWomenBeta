@@ -23,7 +23,7 @@ var projects = {
           }
         ],
         'description': [{
-          'information': 'http://dummyimage.com/162x148.png/ff4444/ffffff',
+          'information': 'Info',
           'time': '5 days',
         }],
         'article': [{

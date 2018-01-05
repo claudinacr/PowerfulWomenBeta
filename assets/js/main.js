@@ -166,6 +166,8 @@ function projectTypes() {
 var Red = document.querySelector('.Red');
 Red.style.display = "none";
 document.addEventListener('click', function (event) {
+
+
   var objetivo = event.target;
   var projectss = projects.project_type;
   var projectClick = '';
@@ -179,6 +181,7 @@ document.addEventListener('click', function (event) {
     projectType.style.display = "block";
     var typeP = document.createElement('p');
     typeP.appendChild(document.createTextNode(projectClick));
+    typeP.style.color = 'white';
     projectType.appendChild(typeP);
     projectType.style.display = 'block';
 
@@ -201,6 +204,7 @@ document.addEventListener('click', function (event) {
     parrafo.appendChild(titleProject);
     titleProject.className = 'titleProject';
     var text = document.createTextNode(objetivo.value);
+
     text.className = 'text';
     var projectTypeThis = document.querySelector('.projectTypeThis');
     projectTypeThis.style.display = 'none';
@@ -236,6 +240,11 @@ document.addEventListener('click', function (event) {
 
     articles.appendChild(articleBox);
 
+    var description = document.querySelector('.description');
+    description.appendChild(document.createTextNode(projects.project_type[typePPP][proj].description[0].information));
+
+    var time = document.querySelector('.time');
+    time.appendChild(document.createTextNode(projects.project_type[typePPP][proj].description[0].time));
 
 
     for (let j = 0; j < projects.project_type[typePPP][proj].students.length; j++) {
@@ -284,6 +293,8 @@ document.addEventListener('click', function (event) {
 
 
 });
+
+
 
 
 
